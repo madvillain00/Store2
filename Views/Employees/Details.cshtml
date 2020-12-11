@@ -1,0 +1,58 @@
+﻿@model Store2.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOfEmployee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOfEmployee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOfPosition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOfPosition)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneOfEmployee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneOfEmployee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Birthday)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Birthday)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EmployeeID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

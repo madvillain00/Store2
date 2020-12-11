@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Store2.Models.Order>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.NameOfClient)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee.NameOfEmployee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataOfOrder)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CountOfProduct)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Client.NameOfClient)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employee.NameOfEmployee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataOfOrder)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CountOfProduct)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
